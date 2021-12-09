@@ -8,17 +8,17 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
- 
+
 @Entity
-@Table(name="libraryTable")
+@Table(name = "libraryTable")
 public class Library {
-	
+
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private Integer ISSD; //ISSD is book id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer ISSD; // ISSD is book id
 	String title;
-	private Integer days; //how many days left until due date
-	
+	private Integer days; // how many days left until due date
+
 	@ManyToOne
 	@JsonIgnore
 	private Student student;
@@ -30,7 +30,7 @@ public class Library {
 	public void setBookid(Integer ISSD) {
 		this.ISSD = ISSD;
 	}
- 
+
 	public String getTitle() {
 		return title;
 	}
@@ -46,12 +46,12 @@ public class Library {
 	public void setStudent(Student student) {
 		this.student = student;
 	}
-	
+
 	public Library(Integer ISSD, String title, Integer days) {
-		
+
 		this.ISSD = ISSD;
 		this.title = title;
-		//this.student = student;
+		// this.student = student;
 		this.days = days;
 	}
 
@@ -63,6 +63,8 @@ public class Library {
 		this.days = days;
 	}
 
-	
+	public Library() {
+
+	}
 
 }

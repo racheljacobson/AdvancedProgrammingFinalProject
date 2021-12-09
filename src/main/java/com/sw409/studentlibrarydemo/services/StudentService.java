@@ -12,6 +12,9 @@ import com.sw409.studentlibrarydemo.repositories.StudentRepository;
 public class StudentService {
 	@Autowired
 	StudentRepository stuRepo;
+	
+	
+	
 	public ArrayList<Student> getAllStudents() {
 		return (ArrayList<Student>) stuRepo.findAll();
 	}

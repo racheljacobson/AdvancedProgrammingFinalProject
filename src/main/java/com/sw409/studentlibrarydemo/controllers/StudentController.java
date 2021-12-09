@@ -13,6 +13,8 @@ import com.sw409.studentlibrarydemo.services.StudentService;
 public class StudentController {
 	@Autowired
 	StudentService stuService;
+
+	
 	@GetMapping("api/student")
 	public ArrayList<Student> getAllStudents() {
 		return stuService.getAllStudents();
