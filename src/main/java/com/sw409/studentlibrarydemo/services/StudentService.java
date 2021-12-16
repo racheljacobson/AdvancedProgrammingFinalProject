@@ -27,9 +27,9 @@ public class StudentService {
 		return (List<Student>) stuRepo.findAll();
 	}
 
-	//get student for specified book id
-	public Student getStudent(int ISSD){
-		return stuRepo.findById(ISSD).get();
+	//get books for specified stuid
+	public Student getStudent(int id){
+		return stuRepo.findById(id).get();
 	}
 
 	//public List<Student> getStudentBook(String book) {

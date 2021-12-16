@@ -31,6 +31,12 @@ public class StudentController {
 	public List<Student> getAllStudents() { //array list or list ?
 		return stuService.getAllStudents();
 	}
+	
+	@GetMapping("api/student/{stuid}") 
+	public Student getStudent(int stuid) {
+		return stuService.getStudent(stuid);
+	}
+	
 
 	//UPDATE --> PATCH mapping
 	@PatchMapping("api/student/{stuid}")
