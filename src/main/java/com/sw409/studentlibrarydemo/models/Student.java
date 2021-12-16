@@ -9,6 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
  
 @Entity(name = "studentTable")
+
 public class Student {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

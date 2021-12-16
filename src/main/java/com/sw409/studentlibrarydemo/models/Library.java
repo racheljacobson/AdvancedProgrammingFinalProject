@@ -60,12 +60,12 @@ public class Library {
 
 	}
 
-	public Library(Integer ISSD, String title, Integer days, Student student) {
+	public Library(Integer ISSD, String title, Integer days) {
 
 		this.ISSD = ISSD;
 		this.title = title;
 		this.days = days;
-		this.student = student; //book correlation with student
+		//this.student = student; //book correlation with student
 		
 	}
 }

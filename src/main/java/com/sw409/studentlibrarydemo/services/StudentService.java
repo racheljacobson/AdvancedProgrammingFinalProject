@@ -22,7 +22,7 @@ public class StudentService {
 		return stuRepo.save(stu);
     }
 
-	//READ --> GET retrives all students and their checked out books
+	//READ --> GET retrieves all students and their checked out books
 	public List<Student> getAllStudents() {
 		return (List<Student>) stuRepo.findAll();
 	}
