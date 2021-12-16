@@ -46,9 +46,10 @@ public class Student {
 		
 	}
 	
-	public Student(Integer stuid, String name) {
+	public Student(Integer stuid, String name, List<Library> books) {
 		this.stuid = stuid;
 		this.name = name;
+		this.books = books;
 	}
 
 }

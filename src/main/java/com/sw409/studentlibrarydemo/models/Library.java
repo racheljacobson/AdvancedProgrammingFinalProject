@@ -47,13 +47,6 @@ public class Library {
 		this.student = student;
 	}
 
-	public Library(Integer ISSD, String title, Integer days) {
-
-		this.ISSD = ISSD;
-		this.title = title;
-		// this.student = student;
-		this.days = days;
-	}
 
 	public Integer getDays() {
 		return days;
@@ -67,4 +60,11 @@ public class Library {
 
 	}
 
+	public Library(Integer ISSD, String title, Integer days, Student student) {
+
+		this.ISSD = ISSD;
+		this.title = title;
+		this.student = student; //added this
+		this.days = days;
+	}
 }
