@@ -23,9 +23,18 @@ public class StudentService {
     }
 
 	//READ --> GET
-	public ArrayList<Student> getAllStudents() {
-		return (ArrayList<Student>) stuRepo.findAll();
+	public List<Student> getAllStudents() {
+		return (List<Student>) stuRepo.findAll();
 	}
+
+	//public List<Student> getStudentBook(String book) {
+	//	List<Student> bookList = new ArrayList<>(); //create new list of students (will only be a list of one) 
+	//	for (int i=0; i<stuList.size(); i++) {
+	//		if(bookList.get(i).getBooks().equals(book)) {
+	//			bookList.add(stuList.get(i)); //add patient w specified illness to pList
+	//		}
+	//	}  return bookList;
+	//}
 
 	//UPDATE --> PATCH 
 	public void updateStudent(Integer id, Student stu) {
