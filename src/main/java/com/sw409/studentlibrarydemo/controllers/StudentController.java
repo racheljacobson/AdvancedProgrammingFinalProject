@@ -1,6 +1,6 @@
 package com.sw409.studentlibrarydemo.controllers;
 
-import java.util.ArrayList;
+//import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +28,7 @@ public class StudentController {
 
 	//READ --> GET mapping
 	@GetMapping("api/student")
-	public ArrayList<Student> getAllStudents() {
+	public List<Student> getAllStudents() { //array list or list ?
 		return stuService.getAllStudents();
 	}
 
