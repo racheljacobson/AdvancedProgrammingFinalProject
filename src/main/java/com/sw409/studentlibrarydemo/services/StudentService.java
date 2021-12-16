@@ -16,15 +16,20 @@ public class StudentService {
 
 	List<Student> stuList = new ArrayList<>();
 	
-	//CREATE --> POST
+	//CREATE --> POST student info and the list of their books
 	public Student addStudent(Student stu) {
         stuList.add(stu);
 		return stuRepo.save(stu);
     }
 
-	//READ --> GET
+	//READ --> GET retrives all students and their checked out books
 	public List<Student> getAllStudents() {
 		return (List<Student>) stuRepo.findAll();
+	}
+
+	//get student for specified book id
+	public Student getStudent(int ISSD){
+		return stuRepo.findById(ISSD).get();
 	}
 
 	//public List<Student> getStudentBook(String book) {

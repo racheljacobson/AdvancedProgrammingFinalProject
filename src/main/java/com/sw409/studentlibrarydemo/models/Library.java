@@ -64,7 +64,8 @@ public class Library {
 
 		this.ISSD = ISSD;
 		this.title = title;
-		this.student = student; //added this
 		this.days = days;
+		this.student = student; //book correlation with student
+		
 	}
 }
