@@ -18,13 +18,13 @@ public class StudentService {
 	
 	//CREATE --> POST student info and the list of their books
 	public Student addStudent(Student stu) {
-        stuList.add(stu);
-		return stuRepo.save(stu);
+        ((ArrayList<Student>) stuRepo).add(stu);
+		return stu;
     }
 
 	//READ --> GET retrieves all students and their checked out books
-	public List<Student> getAllStudents() {
-		return (List<Student>) stuRepo.findAll();
+	public ArrayList<Student> getAllStudents() {
+		return (ArrayList<Student>) stuRepo.findAll();
 	}
 
 	//get books for specified stuid
