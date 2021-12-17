@@ -2,6 +2,7 @@ package com.sw409.studentlibrarydemo.models;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -15,7 +16,7 @@ public class Student {
 	Integer stuid;
 	String name; //do we want first and last names?
 	
-	@OneToMany(mappedBy = "student")
+	@OneToMany(mappedBy = "student", cascade = CascadeType.ALL)
 	private List<Library> books;
 
 	public Integer getStuid() {
