@@ -2,21 +2,22 @@ package com.sw409.studentlibrarydemo.models;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
- 
+
 @Entity(name = "studentTable")
 
 public class Student {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	Integer stuid;
-	String name; //do we want first and last names?
-	
-	@OneToMany(mappedBy = "student")
+	String name; // do we want first and last names?
+
+	@OneToMany(mappedBy = "student", cascade = CascadeType.ALL)
 	private List<Library> books;
 
 	public Integer getStuid() {
@@ -40,13 +41,13 @@ public class Student {
 	}
 
 	public void setBooks(List<Library> books) {
-		this.books = books;
+		this.books.forEach(book -> book.setStudent(this));
 	}
-	
+
 	public Student() {
-		
+
 	}
-	
+
 	public Student(Integer stuid, String name, List<Library> books) {
 		this.stuid = stuid;
 		this.name = name;
